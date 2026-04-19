@@ -1,3 +1,4 @@
+
 import stylizedChar from "../utils/fancy.js"
 import axios from 'axios'
 
@@ -15,7 +16,7 @@ export async function play(message, client) {
             return
         }
 
-        console.log('🎯 Recherche :', query)
+        console.log('👑 Recherche :', query)
 
         await client.sendMessage(remoteJid, {
             text: stylizedChar(`🔎 Recherche : ${query}`),
@@ -40,7 +41,7 @@ export async function play(message, client) {
         
         await client.sendMessage(remoteJid, {
             image: { url: videoData.thumbnail },
-            caption: `🎵 *${videoData.title}*\n⏱️ ${videoData.duration || 'Inconnu'}\n👁️ ${videoData.views || 'Inconnu'} vues\n\n© Digital Crew 243`,
+            caption: `🎵 *${videoData.title}*\n⏱️ ${videoData.duration || 'Inconnu'}\n👁️ ${videoData.views || 'Inconnu'} vues\n\n© YANKEE DEV 225`,
             quoted: message
         })
 
