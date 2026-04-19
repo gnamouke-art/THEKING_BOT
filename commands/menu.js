@@ -40,7 +40,7 @@ export default async function info(client, message) {
     const platform = os.platform();
 
     const botId = client.user.id.split(":")[0];
-    const prefix = configs.config.users?.[botId]?.prefix || "!";
+    const prefix = configs.config.users?.[botId]?.prefix || "👑";
 
     const now = new Date();
     const daysFR = [
