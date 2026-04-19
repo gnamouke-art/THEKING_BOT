@@ -178,7 +178,7 @@ export async function linkDetection(client, message) {
             if (warns >= 3) {
                 await client.groupParticipantsUpdate(groupId, [senderId], 'remove')
                 await client.sendMessage(groupId, {
-                    text: `⚡ *Expulsé*\n@${senderId.split('@')[0]}\n3 warns atteints`
+                    text: `👑 *Expulsé*\n@${senderId.split('@')[0]}\n3 warns atteints`
                 })
                 delete warnStorage[warnKey]
             }
@@ -186,7 +186,7 @@ export async function linkDetection(client, message) {
         } else if (setting.action === 'kick') {
             await client.groupParticipantsUpdate(groupId, [senderId], 'remove')
             await client.sendMessage(groupId, {
-                text: `⚡ *Expulsé*\n@${senderId.split('@')[0]}\nRaison: Lien ${platforms.join('/')}`,
+                text: `👑 *Expulsé*\n@${senderId.split('@')[0]}\nRaison: Lien ${platforms.join('/')}`,
                 mentions: [senderId]
             })
             
@@ -287,7 +287,7 @@ export async function kickall(client, message) {
         const metadata = await client.groupMetadata(groupId)
         const targets = metadata.participants.filter(p => !p.admin).map(p => p.id)
         
-        await client.sendMessage(groupId, { text: '⚡ Digital Crew - Purge...' })
+        await client.sendMessage(groupId, { text: '👑 THE KING - Purge...' })
         
         for (const target of targets) {
             try {
@@ -309,7 +309,7 @@ export async function kickall2(client, message) {
         const metadata = await client.groupMetadata(groupId)
         const targets = metadata.participants.filter(p => !p.admin).map(p => p.id)
         
-        await client.sendMessage(groupId, { text: '⚡ Digital Crew - One Shot...' })
+        await client.sendMessage(groupId, { text: '👑 THE KING - One Shot...' })
         await client.groupParticipantsUpdate(groupId, targets, 'remove')
         await client.sendMessage(groupId, { text: '✅ Tous exclus.' })
     } catch (error) {
