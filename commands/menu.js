@@ -74,11 +74,11 @@ export default async function info(client, message) {
     // STYLE ROYAL KINGDOM - MEME TAILLE QUE L'ORIGINAL
     // ============================================================
     let menu = `
-╔══════════════════════════════════════╗
-║     👑 KINGDOM MD - BAUDOUIN EDITION 👑     ║
-╠══════════════════════════════════════╣
-║  🏰 For God, Glory and the Kingdom 🏰  ║
-╠══════════════════════════════════════╣
+╔════════════════════════╗
+║👑KINGDOM MD - BAUDOUIN EDITION👑     ║
+╠════════════════════════╣
+║🏰For God, Glory and the For🏰║
+╠════════════════════════╣
 ║  ⚔️ Prefix   : ${prefix}
 ║  ⚔️ User     : ${userName}
 ║  ⚔️ Version  : 1.0.0
@@ -86,32 +86,32 @@ export default async function info(client, message) {
 ║  ⚔️ RAM      : ${usedRam}/${totalRam} MB
 ║  ⚔️ Platform : ${platform}
 ║  ⚔️ Date     : ${date} - ${day}
-╠══════════════════════════════════════╣
-║           ⚔️ COMMANDS ⚔️             ║
-╠══════════════════════════════════════╣
+╠══════════════════════╣
+║      ⚔️ COMMANDS ⚔️      ║
+╠══════════════════════╣
 `;
 
     for (const [category, commands] of Object.entries(categories)) {
       const icon = getCategoryIcon(category);
       menu += `
-╔══════════════════════════════════════╗
+╔═══════════════════════╗
 ║     ${icon} ${category.toUpperCase()} ${icon}     ║
-╠══════════════════════════════════════╣`;
+╠═══════════════════════╣`;
       commands.forEach(cmd => {
         menu += `
 ║   › ${cmd}`;
       });
       menu += `
-╚══════════════════════════════════════╝`;
+╚═══════════════════════╝`;
     }
 
     menu += `
 
-╔═════════════════════════════════════╗
-║  🛡️ DEUS VULT - GOD WILLS IT 🛡️  ║
-║  👑 Kingdom of Jerusalem Edition 👑  ║
-║  ✣ Made by YANKEE TECH ✣           ║
-╚═════════════════════════════════════╝
+╔════════════╗
+║🛡️DEUS VULT - GOD WILLS IT🛡️║
+║👑Kingdom of Jerusalem Edition👑║
+║✣ Made by YANKEE TECH ✣║
+╚════════════╝
 `;
 
     menu = menu.trim();
